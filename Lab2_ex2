@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+char f(int x){
+    x = x & 0xff;
+    return x;
+}
+char f(long x){
+    x = x & 0xff;
+    return x;
+}
+char f(char *x){
+    return x[0];
+}
+int main()
+{
+    return 0;
+}
