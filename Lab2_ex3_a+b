@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+struct pisica{
+    char nume[25];
+    char stapin[25];
+    int age;
+};
+
+struct masina{
+    char marca[25];
+    char nrInmatriculare[25];
+    int age;
+};
+struct persoana{
+    char nume[25];
+    char prenume[25];
+    int age;
+};
+template <typename T>
+T Minim(T a,T b){
+    return (a<b?a:b);
+}
+template <typename T>
+T f(T a,T b){
+    if(a==b)
+        return true;
+    else
+        return false;
+}
+int main()
+{
+    
+    return 0;
+}
