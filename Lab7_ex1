@@ -1,0 +1,101 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Persoana{
+public:
+        string name;
+        int varsta;
+        void setname(string name){
+            this->name=name;
+        }
+        string getname(){
+            return this->name;
+        }
+        void setvarsta(int varsta){
+            this->varsta=varsta;
+        }
+        int getvarsta(){
+            return this->varsta;
+        }
+        class copil{
+        public:
+            int nrdinti;
+            void setnrdinti(int nrdinti){
+                this->nrdinti=nrdinti;
+            }
+            int getnrdinti(){
+                return this->nrdinti;
+            }
+            copil(int nrdinti){
+                this->nrdinti=nrdinti;
+            }
+            friend class parinte;
+        };
+        class sofer{
+        public:
+            int timpdecondus;
+            char tipPermis;
+            void settimpdecondus(int timpdecondus){
+                this->timpdecondus=timpdecondus;
+            }
+            int gettimpdecondus(){
+                return this->timpdecondus;
+            }
+            void settippermis(char tipPermis){
+                this->tipPermis=tipPermis;
+            }
+            char gettippermis(){
+                return this->tipPermis;
+            }
+            
+            sofer(int timpdecondus, char tipPermis){
+                this->timpdecondus=timpdecondus;
+                this->tipPermis=tipPermis;
+            }
+            ~sofer(){
+                cout<<"Sofer Deleted"<<endl;
+            }
+        class angajat{
+        public:
+            string locdemunca;
+            int timpdelucru;
+            void setlocdemunca(string locdemunca){
+                this->locdemunca=locdemunca;
+            }
+            string getlocdemunca(){
+                return this->locdemunca;
+            }
+            void settimpdelucru(int timpdelucru){
+                this->timpdelucru=timpdelucru;
+            }
+            int gettimpdelucru(){
+                return this->timpdelucru;
+            }
+            angajat (string locdemunca, int timpdelucru){
+                this->locdemunca=locdemunca;
+                this->timpdelucru=timpdelucru;
+            }
+            ~angajat(){
+                cout<<"Angajat Deleted"<<endl;
+            }
+            class parinte{
+            public:
+                int nrcopii;
+                void setnrcopii(int nrcopii){
+                    this->nrcopii=nrcopii;
+                }
+                int getnrcopii(){
+                    return this->nrcopii;
+                }
+                parinte(int nrcopii){
+                    this->nrcopii=nrcopii;
+                }
+            };
+        };
+    };
+};
+int main()
+{
+
+    return 0;
+}
