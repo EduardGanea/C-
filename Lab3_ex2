@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+class Student{
+    int grade;
+private:
+    Student(){
+        grade=8;
+    }
+public:
+    Student(){
+        grade=new Student();
+    }
+int main()
+{
+    
+    return 0;
+}
