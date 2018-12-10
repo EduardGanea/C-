@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Student{
+private:
+    int note;
+    string name;
+public:
+    Student(int note, string name){
+        this->note=note;
+        this->name=name;
+    }
+    void setNote(int n){
+        this->note=n;
+    }
+    int getNote(){
+        return this->note;
+    }
+    string getName(){
+        return this->name;
+    }
+    void setName(string name){
+        this->name=name;
+    }
+};
+class StudentsGroup{
+private:
+    int StudentsNumber;
+    Student *studentsList;
+public:
+    StudentsGroup(int StudentsNumber){
+        this->StudentsNumber=StudentsNumber;
+        studentsList=new Student[studentsNumber];
+    }
+    void showStudentsInGroup(){
+        for(int i=0;i<this->StudentsNumber;i++){
+            cout<<i<<""<<studentsList[i].getName()<<""<<studentsList[i].getNote()<<endl;
+        }
+    }
+    void readStudentGroup(){
+        int note;
+        string StudentName;
+        for(int i=0;i<this->StudentsNumber;i++){
+            cout<<"student"<<i<<"name";
+            cin>>StudentName;
+            cout<<"note";
+            cin>>note;
+            studentsList[i]=Student(note, StudentName);
+        }
+    }
+};
+int main()
+{
+    StudentsGroup *studentsGroup= new StudentsGroup(3);
+    studentsGroup->readStudentGroup();
+    studentsGroup->showStudentsInGroup();
+    return 0;
+}
