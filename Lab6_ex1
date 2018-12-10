@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+class NumarComplex{
+    public:
+        float a,b;
+};
+class Operatii:public NumarComplex{
+public:
+    double x;
+    NumarComplex g;
+    double modul(double x){
+        return sqrt(x*x);
+    }
+    float modul(){
+        return sqrt(g.a*g.a+g.b*g.b);
+    }
+
+};
+
+int main()
+{
+   
+    return 0;
+}
