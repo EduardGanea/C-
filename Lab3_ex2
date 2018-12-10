@@ -9,7 +9,7 @@ private:
     }
 public:
     Student(){
-        grade=new Student();
+        this->grade=new Student();
     }
 int main()
 {
