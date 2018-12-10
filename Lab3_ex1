@@ -5,10 +5,10 @@ class Student{
 public:
     int grade;
     int getgrade(){
-        return grade;
+        return this->grade;
    }
     void setgrade(int g){
-        grade=g;
+        this->grade=g;
     }
     Student(){
         grade=10;
