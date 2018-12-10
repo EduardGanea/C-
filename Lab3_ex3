@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+class Student{
+    public:
+    static int NrClassStudent;
+    Student(){
+        NrClassStudent=3;
+    }
+    ~Student(){
+        cout<<"Static Destroyed"<<endl;
+    }
+};
+int StaticExample::NrClassStudent=3;
+int main()
+{
+    
+    return 0;
+}
