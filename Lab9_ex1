@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+class Plant{
+public:
+    virtual void a()=0;
+};
+class FoodSource{
+public:
+    virtual void b()=0;
+};
+void Plant::a(){
+    cout<<"Plant virtual method"<<endl;
+}
+class Carot:public Plant{
+public:
+    void a(){
+        Plant::a();
+    }
+};
+void FoodSource::b(){
+    cout<<"FoodSource virtual method"<<endl;
+}
+class Chicken:public FoodSource{
+public:
+    void b(){
+        FoodSource::b();
+    }
+};
+class Apple:public Plant, FoodSource{
+public:
+    void a(){
+        Plant::a();
+    }
+    void b(){
+        FoodSource::b();
+    }
+};
+
+int main()
+{
+    Plant *a;
+    FoodSource *b;
+    Apple *x=new Apple();
+    Carot *f=new Carot();
+    Chicken *g=new Chicken();
+    x->a();
+    x->b();
+    f->a();
+    g->b();
+    return 0;
+}
